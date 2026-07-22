@@ -37,6 +37,7 @@
   --altura-botones: 75px;
   --ancho-pantalla: 400px;
   --altura-pantalla: 150px;
+  --fontSize-pantalla: 50px;
 }
 
 body {
@@ -51,13 +52,17 @@ body {
     border: solid 2px var(--color-borde);
 }
 
-.pantalla {
+#pantalla {
     border: solid 2px var(--color-borde);
     background-color: var(--color-pantalla);
-    color: var(--color-texto);
+    color: var(--color-texto-pantalla);
     margin: 10px auto;
     width: var(--ancho-pantalla);
     height: var(--altura-pantalla);
+    font-size: var(--fontSize-pantalla);
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .numero {
@@ -76,22 +81,26 @@ body {
     background-color: var(--color-operador-hover);
 }
 
-.control {
+.AC,
+.DEL {
     background-color: var(--color-control);
 }
 
-.control:hover {
+.AC:hover,
+.DEL:hover {
     background-color: var(--color-control-hover);
 }
 
 .numero,
 .operador,
-.control {
+.AC,
+.DEL {
     border: solid 1px var(--color-borde);
     height: var(--altura-botones);
     width: var(--ancho-botones);
     font-size: 40px;
     text-align: center;
+    color: var(--color-texto);
 }
 
 .teclado {
